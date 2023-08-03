@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenny's Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Heebo&family=Open+Sans:wght@300;400;500&display=swap');
+    /*@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");*/
+    /* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300;400&display=swap");*/
+    /*@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans:wght@300;400&display=swap');*/
+    body {
+      font-family: 'Heebo', sans-serif;
+      padding: 0px;
+      margin: 0px;
+    }
+    body p {
+      font-family: 'Heebo', sans-serif;
+    }
+    .header {
+      padding: 0px;
+      /*background-image: url(./images/pexels-zukiman-mohamad-22804.jpg);*/
+      background-image: url(./images/pexels-andrea-piacquadio-864994.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 550px;
+    }
+    .card {
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+    /*.carousel-control-prev-icon{
+      position: absolute;
+      top:600px;
+      left:900px;
+      padding:30px;
+      border-radius: 50%;
+    }
+    .carousel-control-next-icon{
+      position: absolute;
+      top:600px;
+      left:60px;
+      padding:30px;
+      border-radius: 50%;
+    }*/
+    .content {
+      max-height: 600px;
+    }
+    /*.carousel-caption{
+      position: absolute;
+      left:0;
+      right:0;
+      text-align: left;
+    }*/
+    /*.background{
+      background-image: radial-gradient((red 5%, green 15%, blue 60%));
+      height: 600px;
+    }*/
+    .hero {
+      height: auto;
+      backdrop-filter: none;
+    }
+    /*.project {
+      position: relative;
+      top: 100px;
+    }*/
+    ul {
+      padding-left: 20px;
+      font-size: 1rem;
+      /*font-family: "Lato", sans-serif;*/
+    }
+
+    /*EXTRA SMALL NOT COVERED BY BOOTSTRAP */
+    @media screen and (min-width: 300px) and (max-width: 575px){
+      body p{
+        font-size: 0.8rem;
+      }
+      .container-fluid{
+        padding-left: 5px;
+        padding-right: 5px;
+        margin:0;
+      }
+      .container-lg{
+        padding: 0px 10px;
+        margin:0;
+      }
+      .intro{
+        width:90%;
+      }
+      .card-box{
+        display: flex;
+        flex-direction: column;
+      }
+      .client{
+        display: inline-block;
+        margin-left: 50px;
+
+      }
+     .card{
+      display:block;
+     }
+     .business{
+      display:none;
+     }
+     .people{
+      display: none;
+     }
+     .profile{
+      display: block;
+     }
+     .carousel-image{
+      display: none;
+     }
+     .int h1{
+      margin-left: 5px;
+      font-size: 6rem;
+     }
+     .pro{
+      display:none;
+     }
+     .card-text{
+      text-align: left;
+      font-size: 0.8rem;
+      padding-left: 0px;
+      padding-right: 0px;
+      width:100%;
+     }
+     .card-body{
+      padding: 0px;
+     }
+     .iframe{
+      display: none;
+     }
+     .pricing{
+      display:flex;
+      padding: 0px;
+      gap: 5px;
+      flex-direction: column;
+     }
+     .bill{
+      display: block;
+     }
+     .kart{
+      display: block;
+     }
+    .listing{
+      display:flex;
+      flex-direction: column;
+    }
+    .container-fluid{
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .list{
+      display: block;
+      width:100%;
+    }
+    }
+    /* SEPARATED FOR 300 AND 400*/
+    @media screen and (min-width: 420px) and (max-width: 575px){
+      .profile{
+      display:flex;
+      flex-direction: row;
+      padding-left: 0px;
+      padding-right: 0px;
+      }
+      .container-lg{
+        padding: 0px 10px;
+        margin:0;
+      }
+      .intro{
+        width:90%;
+      }
+      .list{
+        display: flex;
+        flex-direction: row;
+      }
+      .card-text{
+      text-align: left;
+      font-size: 0.9rem;
+      padding-left: 0px;
+      padding-right: 0px;
+      width:80%;
+     }
+    }
+
+    /* SMALL DEVICES */
+    @media screen and (min-width: 576px) and (max-width: 767px){
+      /*.skills{
+        font-size: 1.3rem;
+      }*/
+     .card{
+      width: 80%;
+     }
+     .card-subtitle{
+      font-size: 2em;
+     }
+     .card-text{
+      text-align: left;
+      font-size: 1.3rem;
+      width:80%;
+     }
+    .card-box{
+      justify-content: start;
+       row-gap: 10px;
+    }
+    .listing{
+      display: flex;
+      flex-direction: column;
+    }
+    .list{
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    /* MEDIUM / LARGE SMALL */
+    @media screen and (min-width: 768px) and (max-width: 991px){
+     .card{
+      width: 45%;
+      margin-left: 0px;
+     }
+     .card-box{
+      justify-content: center;
+      flex-wrap: wrap;
+      gap:20px;
+     }
+     .int h1{
+      font-size: 6rem;
+    }
+    }
+    /* LARGE DEVICES */
+     @media screen and (min-width: 992px) and (max-width: 1200px){
+     .card{
+      width: 30%;
+      margin-left: 0px;
+     }
+     #cardTwo{
+      text-align: left;
+      width:100%;
+     }
+     .card-box{
+      justify-content: center;
+      flex-wrap: wrap;
+      gap:40px;
+     }
+     .staff{
+      position: relative;
+      top: 50px;
+    }
+    .int h1{
+      font-size: 9rem;
+    }
+    }
+
+    /* EXTRA-LARGE */
+    @media screen and (min-width: 1200px){
+     .card{
+      width: 30%;
+      margin-left: 0px;
+     }
+     .card-box{
+      justify-content: center;
+      flex-wrap: wrap;
+      gap:20px;
+     }
+     .staff{
+      position: relative;
+      top: 50px;
+    }
+    }
+  </style>
+  <body>
+    <!--BACKGROUND GRADIENTS FOR HEADER-->
+    <div class="container-fluid header">
+      <div class="background mx-0 container-fluid d-flex flex-column m-0">
+        <nav class="navbar navbar-expand-lg py-0 ps-0">
+          <div class="container-fluid d-flex flex-sm-row">
+            <a class="navbar-brand" href="#"
+              ><i class="bi bi-diamond-fill" style="color: orange"></i
+              >Kehinde</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-white"
+                    aria-current="page"
+                    href="#"
+                    >HOME</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">ABOUT</a>
+                </li>
+                <li class="nav-item text-white">
+                  <a class="nav-link text-white" href="#">FEATURES</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white">PROJECTS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white">CONTACT</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="hero container-fluid d-flex flex-row py-5">
+          <div
+            class="header-title d-sm-block col-sm-10 col-md-8 col-lg-6 mt-5 ms-3 text-white"
+          >
+            <div class="intro container-lg col-sm-12 ms-0">
+              <div><small>02/PROVIDE EQUITY</small></div>
+              <h2 class="display-4">
+                We Use Real Estate to Show Our Appreciation of the World
+              </h2>
+              <div>
+                <small>Explore</small>
+                <i
+                  class="bi bi-arrow-down-circle-fill"
+                  style="font-size: 30px; color: orange"
+                ></i>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+   </div>
+    <div class="about contanier-fluid pt-5 text-white" style="background-color: #000000d7;">
+      <div class="container-lg d-sm-flex-column d-md-flex pt-5">
+        <div class="int col-sm-10 col-md-5 col-lg-6">
+          <p class="lead ps-2">Our project</p>
+          <h1 class="display-1" style="color: #ff6000">
+            200+
+          </h1>
+        </div>
+        <div class="d-flex flex-column col-sm-9 col-md-7 col-lg-6 mt-sm-5">
+          <div class="container-lg ms-0">
+            <h2 class="display-4 text-lg-end">What We do</h2>
+            <p class="skills text-lg-end col-md-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Illum blanditiis nam tempore dolores exercitationem facilis doloremque non asperiores excepturi libero eaque fuga, 
+              cupiditate distinctio quae culpa quaerat, quo quis eligendi quia laudantium aliquid similique provident? A reprehenderit illo porro necessitatibus.</p>
+          </div>
+          <div class="pro d-sm-none d-lg-inline">
+            <img src="./images/business2.jpg" alt="business" class="img-fluid ms-2 staff"
+              width="auto" height="250"/>
+          </div>
+        </div>
+      </div>
+    <div class="container-fluid py-5 mt-lg-0" style="background-color: #454545">
+      <div class="container-lg d-flex flex-column">
+        <div class="container-lg my-5 col-sm-8 ms-sm-0">
+          <h2 class="display-4 text-white">
+            We Focus on All Real Estate Class Assests
+          </h2>
+        </div>
+        <div class="card-box container-lg d-flex flex-sm-row flex-sm-wrap justify-content-sm-start justify-content-md-start pb-5">
+          <div class="card cardOne text-light" style="border-top: 1.5px solid white; border-radius: 0px; background-color: #454545;">
+            <div class="card-body mt-5 p-0">
+              <h5 class="card-title mb-5">01</h5>
+              <h4 class="card-subtitle mb-3">Residential</h4>
+              <p class="card-text pb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis cum, 
+                voluptatem maxime fugiat architecto eos. Libero corporis pariatur odit alias, blanditiis quo qui amet iusto.</p>
+            </div>
+          </div>
+          <div class="card cardOne" style="border-top: 1px solid #ff6000; border-radius: 0px; background-color: #454545;">
+            <div class="card-body mt-5 p-0 text-light">
+              <h5 class="card-title mb-5">02</h5>
+              <h4 class="card-subtitle mb-3">Industral & Tech Facilities</h4>
+              <p class="card-text pb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatibus 
+                dicta eum cumque explicabo dolores commodi totam. Quidem est cupiditate 
+                voluptatem quas.</p>
+            </div>
+          </div>
+          <div class="card CardOne text-light" style=" border-top: 1.5px solid white; border-radius: 0px; background-color: #454545;">
+            <div class="card-body mt-5 p-0">
+              <h5 class="card-title mb-5">03</h5>
+              <h4 class="card-subtitle mb-3">Land Ventures</h4>
+              <p class="card-text pb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius placeat, 
+                dolor corrupti laborum ipsam dolorum nesciunt, sit natus illum doloribus provident 
+                repudiandae sint! Aspernatur beatae.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid py-5" style="background-color: #272626a8;"">
+      <div class="content container-lg d-flex justify-content-center">
+        <div class="business d-sm-none d-lg-inline col-lg-4">
+          <img src="images/business3.png.jpg" alt="kenny" height="600"
+            style="position: relative; bottom: 60px" class="img-fluid"
+          />
+        </div>
+        <div class="profile container d-flex flex-column col-sm-12 col-md-10 col-lg-7 ms-sm-0 ms-md-5 px-md-3">
+          <h2 class="display-4 text-white">Who We Are</h2>
+            <p class="text-white">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
+              tempore fuga culpa assumenda cupiditate reiciendis? Culpa maxime
+              dicta omnis, autem fugiat explicabo obcaecati itaque fuga, nemo
+              dolor libero voluptates voluptatem?
+            </p>
+          <div class="listing container-fluid d-grid-lg mt-4 p-0">
+            <div class="list row text-white">
+              <div class="col">
+                <ul>
+                  <li>Strong macroeconomic perspective</li>
+                </ul>
+              </div>
+              <div class="col">
+                <ul>
+                  <li>Experience management team with extensive real estate</li>
+                </ul>
+              </div>
+            </div>
+            <div class="list row text-white">
+              <div class="col">
+                <ul>
+                  <li>Opportunitisc and flexible cross-sector mentality</li>
+                </ul>
+              </div>
+              <div class="col">
+                <ul>
+                  <li>
+                    Local reach and deep relationships with local patners and
+                    advisors
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="list row text-white">
+              <div class="col">
+                <ul>
+                  <li>
+                    Dedication to the highest ethical and responsible business
+                    practices
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <button class="btn btn-warning">Get in Touch</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="container-fluid py-5" style="background-color: #454545">
+      <h2 class="display-4 text-center text-white">Testimonial</h2>
+    <div id="carouselExampleCaptions" class="carousel slide py-5" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card mx-auto mb-3 w-75" style="background-color: #454545; border: 0.4px solid #ff6000">
+            <div class="row g-0">
+              <div class="carousel-image col-sm-12 col-lg-6">
+                <img src="./images/pexels-fauxels-3184418.jpg" class="img-fluid rounded-start" alt="business">
+              </div>
+              <div class="col-sm-12 col-lg-6">
+                <div class="card-body d-flex flex-column text-white">
+                  <div class="container-lg">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text" id="cardTwo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque  fugit ipsa laborum saepe, 
+                      necessitatibus nisi eveniet recusandae facilis in blanditiis minima illo. Voluptate modi numquam unde, 
+                      odit impedit praesentium quam ut quae dolorem.</p>
+                      <div class="ps-lg-2 d-flex d-block">
+                        <div class="row">
+                          <div class="col-4">
+                            <img src="./images/kenny.png.png" alt="kenny" width="60px">
+                          </div>
+                          <div class="col-8 mt-2">
+                            <p class="card-text mb-0">Mr Kolawole Daniel</p>
+                            <p class="card-text mb-0">Friend(Nigeria)</p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item active">
+          <div class="card mx-auto mb-3 w-75" style="background-color: #454545; border: 0.4px solid #ff6000;">
+            <div class="row g-0">
+              <div class="carousel-image col-sm-12 col-lg-6">
+                <img src="./images/business.jpg.jpg" class="img-fluid rounded-start" alt="business">
+              </div>
+              <div class=" col-sm-12 col-lg-6">
+                <div class="card-body d-flex flex-column text-white">
+                  <div class="container-lg">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text" id="cardTwo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque  fugit ipsa laborum saepe, 
+                      necessitatibus nisi eveniet recusandae facilis in blanditiis minima illo. Voluptate modi numquam unde, 
+                      odit impedit praesentium quam ut quae dolorem.</p>
+                      <div class="ps-lg-2 d-flex d-block">
+                        <div class="row">
+                          <div class="col-4">
+                            <img src="./images/kenny.png.png" alt="kenny" width="60px">
+                          </div>
+                          <div class="col-8 mt-2">
+                            <p class="card-text mb-0">Mr Kolawole Daniel</p>
+                            <p class="card-text mb-0">Friend(Nigeria)</p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item active">
+          <div class="card mx-auto mb-3 w-75" style="background-color: #454545; border: 0.4px solid #ff6000">
+            <div class="row g-0">
+              <div class="carousel-image col-sm-12 col-lg-6">
+                <img src="./images/pexels-andrea-piacquadio-3775551.jpg" class="img-fluid rounded-start" alt="business">
+              </div>
+              <div class="col-sm-12 col-lg-6">
+                <div class="card-body d-flex flex-column text-white">
+                  <div class="container-lg">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text" id="cardTwo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque  fugit ipsa laborum saepe, 
+                      necessitatibus nisi eveniet recusandae facilis in blanditiis minima illo. Voluptate modi numquam unde, 
+                      odit impedit praesentium quam ut quae dolorem.</p>
+                      <div class="ps-lg-2 d-flex d-block">
+                        <div class="row">
+                          <div class="col-sm-12 col-lg-4">
+                            <img src="./images/kenny.png.png" alt="kenny" width="60px">
+                          </div>
+                          <div class="col-sm-12 col-lg-8 mt-2">
+                            <p class="card-text mb-0">Mr Kolawole Daniel</p>
+                            <p class="card-text mb-0">Friend(Nigeria)</p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      </div>
+    </div>
+    <div class="container-fluid h-auto py-5" style="background-color: #faf9f9;">
+      <p class="client ms-sm-5 fw-semibold">MEET OUR CLIENTS</p>
+      <div class="row justify-content-center ms-5">
+        <div class="col">
+          <div><img src="./images/unicef.png" alt="udemy" height="40px" /></div>
+        </div>
+        <div class="col">
+          <div><img src="./images/window.png" alt="w3schools" height="50px" width="150px"></div>
+        </div>
+        <div class="col">
+          <div><img src="./images/beko logo.png" alt="w3schools" height="50px"></div>
+        </div>
+        <div class="col">
+          <div><img src="./images/spofify logo.png" alt="w3schools"height="50px" width="150px"></div>
+        </div>
+        <div class="col">
+          <div><img src="./images/Standard_Chartered_(2021).png" alt="w3schools" width="150px" height="50px"></div>
+        </div>
+      </div>
+    </div>
+      <div class="container-fluid">
+        <div class="container-lg d-flex flex-sm-column flex-lg-row px-0 py-5 px-5" style="gap:15px;">
+           <div class="col-sm-10 mx-sm-auto mx-lg-0 col-md-8 d-lg-inline justify-content-md-start col-lg-6">
+            <div class="card w-auto border">
+              <img src="./images/pexels-edmond-dantès-8553862.jpg" class="card-img-top people" alt="our people" height="300">
+              <div class="card-body">
+                <p class="card-title fw-semibold mb-3">Join Our Team at ALX: Empowering Millions of African Youth</p>
+                <small class="card-text text-muted mb-3" style="font-size:0.85rem;">Some quick example text to build on the card title and make up the bulk of the card's content.</small>
+                <a href="#" class="d-block mt-3" style="text-decoration: none;">READ MORE</a>
+              </div>
+            </div>
+           </div>
+           <div class="iframe col-sm-10 mx-sm-auto mx-lg-0 col-md-8 justify-content-md-center d-lg-inline col-lg-6 mt-3">
+            <iframe width="100%" height="450" src="https://www.youtube.com/embed/nGzYzq3Wsos" title="YouTube video player" 
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+              web-share" allowfullscreen>
+            </iframe>
+           </div>
+        </div>
+      </div>    
+      <div class="container-fluid py-5" style="background-color: #faf9f9;">
+        <div class="container-lg d-flex flex-column">
+          <div>
+            <h2 class="display-4 text-center">Checkout Form</h2>
+            <p class="w-75 text-center lead mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur odio natus expedita ea ipsam, doloremque placeat sequi incidunt! Ab, non?</p>
+          </div>
+          <div class="pricing container-lg d-flex flex-sm-column flex-md-row py-5 justify-content-between">
+            <div class="col-lg-8 bill">
+              <h3>Billing Address</h3>
+              <form class="needs-validation" novalidate>
+              <div class="d-flex justify-content-between mb-4">
+                <div class="col-5">
+                  <label for="First Name" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="Name" placeholder="Your First Name" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-5">
+                  <label for="lastName" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Your Last Name" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+              </div>
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" class="form-control mb-4" id="email" placeholder="Your email e.g mario@gmail.com" required>
+                  <label for="Address" class="form-label">Address 1</label>
+                  <input type="text" class="form-control mb-4" id="Address" placeholder="Your Location" required>
+                  <label for="Address" class="form-label">Address 2</label>
+                   <input type="text" class="form-control mb-4" id="Address" placeholder="Your Location" required>
+                 <div class="d-flex justify-content-between mb-4">
+                  <div class="col-4">
+                    <label for="country">Country</label>
+                      <select name="" class="form-select" id="payment" required>
+                        <option value="Monthly Package">Nigeria</option>
+                        <option value="Daily Package">Canada</option>
+                        <option value="Weekly Package" selected>Poland</option>
+                        <option value="Yearly Package">England</option>
+                        <option value="Free plan">Portugal</option>
+                        <option value="Free plan">Sweden</option>
+                        <option value="Free plan">Argentina</option>     
+                      </select>
+                  </div>
+                  <div class="col-4">
+                    <label for="country">State</label>
+                      <select name="" class="form-select" id="payment" required>
+                        <option value="Monthly Package">Lagos</option>
+                        <option value="Daily Package">Ondo</option>
+                        <option value="Weekly Package" selected>Kwara</option>
+                        <option value="Yearly Package">Abuja</option>
+                        <option value="Free plan">Ekiti</option>
+                        <option value="Free plan">Ogun</option>
+                        <option value="Free plan">Osun</option>     
+                      </select>
+                  </div>
+                  <div class="col-3">
+                    <label for="zip" class="form-label mb-0">Zip code</label>
+                    <input type="text" class="form-control" required>
+                  </div>
+                 </div>
+                 <hr>
+                 <p>Payment</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked required>
+                  <label class="form-check-label" for="exampleRadios1">
+                    Credit card
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" required>
+                  <label class="form-check-label" for="exampleRadios2">
+                    Debit Card
+                  </label>    
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" required>
+                  <label class="form-check-label" for="exampleRadios3">
+                    PayPal
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                  <label class="form-check-label" for="invalidCheck2">
+                    Agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+                <div class="d-flex flex-column mt-4">
+                  <div class="d-flex justify-content-between" style="gap:30px;">
+                  <div class="col">
+                  <label for="lastName" class="form-label">Name on Card</label>
+                  <input type="text" class="form-control mb-4" id="lastName" placeholder="Your Card Name" required>
+                  </div>
+                  <div class="col">
+                    <label for="lastName" class="form-label">Card Number</label>
+                    <input type="text" class="form-control mb-4" id="lastName" placeholder="Your Card Number" required>
+                  </div>
+                  </div>
+                  <div class="d-flex justify-content-start"style="gap:30px;">
+                    <div class="col-3">
+                    <label for="lastName" class="form-label">Name on Card</label>
+                    <input type="text" class="form-control mb-4" id="lastName" placeholder="Your Card Name" required>
+                    </div>
+                    <div class="col-3">
+                      <label for="lastName" class="form-label">Card Number</label>
+                      <input type="text" class="form-control mb-4" id="lastName" placeholder="Your Card Number" required>
+                    </div>
+                  </div>
+                  <hr>
+                  <button type="submit" class="btn btn-lg btn-warning text-white">Continue to Checkout</button>
+                </div>
+                </form>
+            </div>
+            <div class="kart col-sm-6 my-4 col-md-4 col-lg-3">
+              <div class="d-flex justify-content-start align-items-start my-3">
+                <h3>Your Kart</h3>
+                <span class="ms-auto badge bg-warning rounded-pill" style="font-size: 1.2rem;">4</span>
+              </div>
+              <ol class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="">Barcelona<span class="ms-2 badge bg-warning rounded-pill">5</span></div>
+                    5 places booked
+                  </div>
+                  <span>$150</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="">Manchester<span class="ms-2 badge bg-warning rounded-pill">1</span></div>
+                    1 place booked
+                  </div>
+                  <span>$20</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="">Amstardam<span class="ms-2 badge bg-warning rounded-pill">8</span></div>
+                    8 places booked
+                  </div>
+                  <span>$30</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="">Millan<span class="ms-2 badge bg-warning rounded-pill">3</span></div>
+                    3 places booked
+                  </div>
+                  <span>$90</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div><p>Total (USD)</p></div>
+                  </div>
+                  <span>$90</span>
+                </li>
+              </ol>
+            </div>
+          </div>                    
+        </div>
+      </div>
+      <div class="container-fluid bg-dark py-5">
+        <div class="container text-white">
+          <footer class="py-lg-5">
+            <div class="row foot">
+              <div class="col-6 col-sm-4 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-white">Home</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-white">Features</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-white">Pricing</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-white">FAQs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-white">About</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-6 col-sm-4 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-white">Home</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-white">Features</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-white">Pricing</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-white">FAQs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-white">About</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-sm-4 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-white">Home</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-white">Features</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-white">Pricing</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-white">FAQs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-white">About</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-12 col-md-5 offset-md-1 mb-3">
+                <form>
+                  <h5>Subscribe to our newsletter</h5>
+                  <p>Monthly digest of what's new and exciting from us.</p>
+                  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                    <button class="btn btn-warning" type="button">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+        
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p>© 2023 Company, Inc. All rights reserved.</p>
+              <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+              </ul>
+            </div>
+          </footer>
+        </div>
+      </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    >
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+</script>
+  </body>
+</html>
